@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "e35bb48e-f703-49b2-a201-9d22b9df2cdc",
-		"name": "Spring Cloud Test TEST",
+		"_postman_id": "4286efae-8dca-4603-931c-b67a35b819dc",
+		"name": "Spring Cloud Test Requests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "31306025"
 	},
@@ -12,12 +12,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/api/questions?amount=1",
+					"raw": "http://localhost:8082/api/questions?amount=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8081",
+					"port": "8082",
 					"path": [
 						"api",
 						"questions"
@@ -57,12 +57,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/questions?amount=10",
+					"raw": "http://localhost:8083/api/questions?amount=10",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8083",
 					"path": [
 						"api",
 						"questions"
@@ -95,14 +95,118 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/exam",
+					"raw": "http://localhost:8081/exam",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8081",
 					"path": [
 						"exam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Config Server Retreive Config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/ExaminatorMicro/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"ExaminatorMicro",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Questions for history From Api Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/history/request-questions?amount=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"history",
+						"request-questions"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Questions for math From Api Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/math/request-questions?amount=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"math",
+						"request-questions"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All exams From Api Gateway",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mathmicro\": 5,\r\n    \"historymicro\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/examenator/request-questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"examenator",
+						"request-questions"
 					]
 				}
 			},
