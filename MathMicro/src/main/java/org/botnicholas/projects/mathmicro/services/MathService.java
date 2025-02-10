@@ -2,12 +2,14 @@ package org.botnicholas.projects.mathmicro.services;
 
 import java.util.Random;
 import org.botnicholas.projects.mathmicro.models.Question;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MathService {
   private Random random = new Random();
-  private int max = 10;
+  @Value("${max.number.value:1}")
+  private int max;
 
   public Question getRandom() {
     int a = random.nextInt(max);
