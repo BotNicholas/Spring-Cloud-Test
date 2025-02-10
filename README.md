@@ -9,3 +9,6 @@ This project consists of four components:
 2) **HistoryMicro** - microservice responsible for generating history examination questions
 3) **ExaminatorMicro** - microservice responsible for making calls to MathMicro and HistoryMicro ad generating Exam Questions
 4) **EuricaDiscoveryMicro** - Spring Cloud Discovery Service
+
+# Config
+All the config you can find [here](https://github.com/BotNicholas/Spring-Cloud-Test-Config)...
