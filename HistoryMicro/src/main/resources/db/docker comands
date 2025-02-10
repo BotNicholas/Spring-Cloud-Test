@@ -1,0 +1,2 @@
+docker build -t history_db_i ./
+docker run -p 5432:5432 --name history_db -d history_db_i
