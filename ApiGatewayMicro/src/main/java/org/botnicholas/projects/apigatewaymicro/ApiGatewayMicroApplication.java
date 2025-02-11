@@ -25,6 +25,9 @@ public class ApiGatewayMicroApplication {
                 .route("examenator", r -> r.path("/examenator/request-questions")
                         .filters(f -> f.rewritePath("/examenator/request-questions", "/exam"))
                         .uri("lb://EXAMINATORMICRO"))
+                .route("Subjects", r -> r.path("/subjects/get-available-sync")
+                    .filters(f -> f.rewritePath("/subjects/get-available-sync", "/api/get-subgects-sync"))
+                    .uri("lb://EXAMENSSUBJECTSINFORMERMICRO"))
                 .build();
     }
 }

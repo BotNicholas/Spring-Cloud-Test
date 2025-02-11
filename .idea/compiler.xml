@@ -9,8 +9,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ApiGatewayMicro" />
         <module name="MathMicro" />
+        <module name="ExamensSubjectsInformerMicro" />
         <module name="EurecaDiscoveryMicro" />
         <module name="ConfigServerMicro" />
+        <module name="ExamensSubjectsRetreiverMicro" />
       </profile>
       <profile name="Annotation profile for HistoryMicro" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -20,15 +22,6 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="HistoryMicro" />
-      </profile>
-      <profile name="Annotation profile for ExaminatorMicro" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-        </processorPath>
         <module name="ExaminatorMicro" />
       </profile>
     </annotationProcessing>
@@ -38,6 +31,8 @@
       <module name="ApiGatewayMicro" options="-parameters" />
       <module name="ConfigServerMicro" options="-parameters" />
       <module name="EurecaDiscoveryMicro" options="-parameters" />
+      <module name="ExamensSubjectsInformerMicro" options="-parameters" />
+      <module name="ExamensSubjectsRetreiverMicro" options="-parameters" />
       <module name="ExaminatorMicro" options="-parameters" />
       <module name="HistoryMicro" options="-parameters" />
       <module name="MathMicro" options="-parameters" />

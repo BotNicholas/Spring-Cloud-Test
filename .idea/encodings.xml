@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/ApiGatewayMicro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ConfigServerMicro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/EuricaDiscoveryMicro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ExamensSubjectsInformerMicro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ExamensSubjectsRetreiverMicro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ExaminatorMicro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HistoryMicro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MathMicro/src/main/java" charset="UTF-8" />

@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/MathMicro/pom.xml" />
         <option value="$PROJECT_DIR$/ConfigServerMicro/pom.xml" />
         <option value="$PROJECT_DIR$/ApiGatewayMicro/pom.xml" />
+        <option value="$PROJECT_DIR$/ExamensSubjectsInformerMicro/pom.xml" />
+        <option value="$PROJECT_DIR$/ExamensSubjectsRetreiverMicro/pom.xml" />
       </list>
     </option>
   </component>
