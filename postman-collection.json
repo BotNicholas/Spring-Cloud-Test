@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4286efae-8dca-4603-931c-b67a35b819dc",
+		"_postman_id": "35814dd6-a727-4c6f-a905-3d8e5d0fe5c8",
 		"name": "Spring Cloud Test Requests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "31306025"
@@ -72,6 +72,46 @@
 							"key": "amount",
 							"value": "10"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subjects from Retriever",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subjects from Informer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/get-subgects-sync",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"get-subgects-sync"
 					]
 				}
 			},
@@ -207,6 +247,26 @@
 					"path": [
 						"examenator",
 						"request-questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subjects from Retriever with API Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subjects/get-available-sync",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects",
+						"get-available-sync"
 					]
 				}
 			},
