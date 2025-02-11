@@ -1,0 +1,3 @@
+# Eurica DiscoveryService
+
+This is Eurica service Discovery microservice responsible for discovering microservices...

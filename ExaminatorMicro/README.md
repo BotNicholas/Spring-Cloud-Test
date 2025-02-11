@@ -1,0 +1,3 @@
+# Examinator
+
+this is a microservice that comunicates with other microservices to retrieve data...
