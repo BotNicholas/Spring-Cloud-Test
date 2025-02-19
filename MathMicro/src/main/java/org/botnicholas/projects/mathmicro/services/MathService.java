@@ -3,9 +3,11 @@ package org.botnicholas.projects.mathmicro.services;
 import java.util.Random;
 import org.botnicholas.projects.mathmicro.models.Question;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 @Service
+@RefreshScope
 public class MathService {
   private Random random = new Random();
   @Value("${max.number.value:1}")
