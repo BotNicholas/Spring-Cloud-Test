@@ -1,5 +1,6 @@
 package org.botnicholas.projects.apigatewaymicro;
 
+import org.botnicholas.projects.apigatewaymicro.filters.CustomGatewayFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -14,10 +15,10 @@ public class ApiGatewayMicroApplication {
     }
 
     @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+    public RouteLocator customRouteLocator(RouteLocatorBuilder builder, CustomGatewayFilter customFilter) {
         return builder.routes()
                 .route("math", r -> r.path("/math/request-questions")
-                        .filters(f -> f.rewritePath("/math/request-questions", "/api/questions"))
+                        .filters(f -> f.filter(customFilter).rewritePath("/math/request-questions", "/api/questions"))
                         .uri("lb://MATHMICRO")) /*lb: here shands for Load Balancing (The same as is Examinator microservice - @LoadBalanced upon RestTemplate)*/
                 .route("history", r -> r.path("/history/request-questions")
                         .filters(f -> f.rewritePath("/history/request-questions", "/api/questions"))
