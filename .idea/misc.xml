@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/ConfigServerMicro" />
+    <file type="web" url="file://$PROJECT_DIR$/SecretsServerApplication" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -15,7 +16,16 @@
         <option value="$PROJECT_DIR$/ApiGatewayMicro/pom.xml" />
         <option value="$PROJECT_DIR$/ExamensSubjectsInformerMicro/pom.xml" />
         <option value="$PROJECT_DIR$/ExamensSubjectsRetreiverMicro/pom.xml" />
+        <option value="$PROJECT_DIR$/AuthenticationService/pom.xml" />
+        <option value="$PROJECT_DIR$/SecretsServerApplication/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/SecretsServerApplication/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">

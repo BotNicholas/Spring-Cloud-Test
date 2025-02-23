@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "35814dd6-a727-4c6f-a905-3d8e5d0fe5c8",
+		"_postman_id": "824047ee-1d5c-4090-8197-2a46157b37ef",
 		"name": "Spring Cloud Test Requests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "31306025"
@@ -103,12 +103,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8085/api/get-subgects-sync",
+					"raw": "http://localhost:8086/api/get-subgects-sync",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8085",
+					"port": "8086",
 					"path": [
 						"api",
 						"get-subgects-sync"
@@ -171,6 +171,16 @@
 		{
 			"name": "Get Questions for history From Api Gateway",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNzQwMzQzMjg4LCJyb2xlIjoiVVNFUiJ9.V6bXpWGG-gQtrS9obe0x81Ve6PDeX7qVow3dhq4fsx37CONFOC5x_vfDGB3I1avR",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -197,6 +207,16 @@
 		{
 			"name": "Get Questions for math From Api Gateway",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNzQwMzQzMjg4LCJyb2xlIjoiVVNFUiJ9.V6bXpWGG-gQtrS9obe0x81Ve6PDeX7qVow3dhq4fsx37CONFOC5x_vfDGB3I1avR",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -224,7 +244,14 @@
 			"name": "Get All exams From Api Gateway",
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNzQwMzQzMjg4LCJyb2xlIjoiVVNFUiJ9.V6bXpWGG-gQtrS9obe0x81Ve6PDeX7qVow3dhq4fsx37CONFOC5x_vfDGB3I1avR",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [],
@@ -267,6 +294,303 @@
 					"path": [
 						"subjects",
 						"get-available-sync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Config Server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/actuator/busrefresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"actuator",
+						"busrefresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Secrets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Config-Token",
+						"value": "secret_bro",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8200/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"test\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8688/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8688",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"test\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8688/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8688",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshAccess",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNzQwMzQzMTE5fQ.kf5J5dezZFIFg2h3p9e-ceui68YpCKrx2muo5Cg-0axUqFDstWkuXrnh5ZDEfZRyzNb-k_ToDbA5ZluipattxQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8688/auth/refresh-access",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8688",
+					"path": [
+						"auth",
+						"refresh-access"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh ALL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNzQwMzQzMzk4fQ.-Rme9S-3KgHGXbaJM986RY8_1t-lFxFAutH_2939426Cbl6AZ2hJukKQEhTDZaylcAtMbVpsCYZc1rsQgFzAOQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8688/auth/refresh-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8688",
+					"path": [
+						"auth",
+						"refresh-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User from API Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"testAPI\",\r\n    \"password\":\"testAPI\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authentication/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login from API Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"test\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authentication/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshAccess from API Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QVBJIiwiZXhwIjoxNzQwMzQzODA0fQ.SJoHfImjr8siPd7F0R5fqrQY6DoYlI9YjThNVUrXoAB7cSG7KJbPBEM9Flw-qwSxiHVtk6B1eOkG9iebjTqyQg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authentication/refresh-access",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"refresh-access"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HOME Controller access test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/authentication/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh ALL from API Gateway Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QVBJIiwiZXhwIjoxNzQwMzQzODA0fQ.SJoHfImjr8siPd7F0R5fqrQY6DoYlI9YjThNVUrXoAB7cSG7KJbPBEM9Flw-qwSxiHVtk6B1eOkG9iebjTqyQg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authentication/refresh-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"refresh-all"
 					]
 				}
 			},
